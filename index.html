@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 transition duration-300">
+    <div class="container mx-auto p-6">
+        <!-- Header -->
+        <h1 class="text-3xl font-bold text-center mb-6">🎬 Movie Search App</h1>
+
+        <!-- Search Box -->
+        <div class="flex justify-center mb-6">
+            <input id="searchInput" type="text" 
+                class="p-3 w-1/2 border rounded-l-md focus:outline-none" 
+                placeholder="Search for a movie..." 
+                onkeyup="liveSearch()">
+            <button onclick="searchMovie()" 
+                class="bg-blue-600 text-white px-4 py-3 rounded-r-md hover:bg-blue-700 transition">Search</button>
+        </div>
+
+
+        <!-- Movie Results -->
+        <div id="movieResults" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
